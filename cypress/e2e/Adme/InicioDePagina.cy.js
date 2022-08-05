@@ -8,6 +8,7 @@ describe("Primer inicio", () => {
         cy.visit("https://adme.com.ar")
         cy.title('eq', 'Adme - The social network that pays money')
         
+        cy.get(".navbar-nav > :nth-child(1) > .page-scroll").should('be.visible').click()
     
     })
 
