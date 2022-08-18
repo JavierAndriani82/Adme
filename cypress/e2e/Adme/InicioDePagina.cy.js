@@ -1,20 +1,27 @@
 ///<reference types="cypress" />
 
 
-
 describe("Primer inicio", () => {
-
-    it("Iniciando en Adme", () => {
+    beforeEach(() => {
         cy.visit("https://adme.com.ar")
         cy.title('eq', 'Adme - The social network that pays money')
         let tiempo=3000
+    })
+    it("Iniciando en Adme", () => {
         
-        cy.get(".navbar-nav > :nth-child(1) > .page-scroll").should('be.visible').click()
-        cy.wait(tiempo)
-        cy.get(".navbar-nav > :nth-child(2) > .page-scroll").should("be.visible").click()
-        cy.wait(tiempo)
-        cy.get(":nth-child(3) > .page-scroll").should("be.visible").click()
+    cy.Click(".navbar-nav > :nth-child(1) > .page-scroll", 1500)
+    cy.Click('.navbar-nav > :nth-child(2) > .page-scroll', 1500)
+    cy.Click(":nth-child(3) > .page-scroll", 1500)
 
+    })
+
+    it("Validando paginas", () => {
+        cy.Click(":nth-child(4) > .page-scroll", 1000)
+        cy.get(".input-newsletter").type("prueba1@gmail.com")
+        cy.Click(".disabled", 0)
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            return false
+        })
     })
 
 })
