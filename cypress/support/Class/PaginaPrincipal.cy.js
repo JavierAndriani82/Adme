@@ -7,7 +7,7 @@ class BotonesCabecera {
         this.imputMail = ".input-newsletter";
         this.BotonSubscribe = ".disabled";
         this.BotonAgencias = ':nth-child(5) > .page-scroll';
-        this.Inversores = ":nth-child(6) > .page-scroll";
+        this.BotonInversores = ":nth-child(6) > .page-scroll";
         }
 
         Boton = () =>{
@@ -33,14 +33,18 @@ class BotonesCabecera {
         }
 
         Boton3 = () => {
-            cy.get(this.Inversores).click()
+            cy.get(this.BotonAgencias).click()
+            cy.wait(1500)
+            cy.get(this.imputMail).type("mail1@gmail.com")
+            cy.wait(1500)
+            cy.get(this.BotonSubscribe).click()
             cy.wait(1500)
             
         }
 
         Boton4 = () => {
         
-            cy.get(this.BotonAgencias).click()
+            cy.get(this.BotonInversores).click()
         }
 
 }
