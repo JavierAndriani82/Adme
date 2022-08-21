@@ -1,0 +1,81 @@
+class BotonesCabecera {
+    constructor() {
+        this.BotonNosotros = ".navbar-nav > :nth-child(1) > .page-scroll";
+        this.PrimerTexto = ".col-md-10 > .section-heading > h2";
+        this.SegundoTexto = ".col-md-10 > .section-heading > p";
+        this.TercerTexto = ":nth-child(1) > .card > .card-body > .pt-2 > h5";
+        this.CuartoTexto = ":nth-child(1) > .card > .card-body > .pt-2 > .mb-0";
+        this.QuintoTexto = ":nth-child(2) > .card > .card-body > .pt-2 > h5";
+        this.SextoTexto = ":nth-child(2) > .card > .card-body > .pt-2 > .mb-0";
+        this.SeptimoTexto = ":nth-child(3) > .card > .card-body > .pt-2 > h5";
+        this.OctavoTexto = ":nth-child(3) > .card > .card-body > .pt-2 > .mb-0";
+        this.IconUno = ":nth-child(1) > .card > .card-body > .pb-2 > .fas";
+        this.IconDos = ":nth-child(2) > .card > .card-body > .pb-2 > .fas";
+        this.IconTres = ":nth-child(3) > .card > .card-body > .pb-2 > .fas";
+        this.Hover1 = ':nth-child(1) > .card > .card-body'
+        this.Hover2 = ":nth-child(2) > .card > .card-body"
+        this.Hover3 = ":nth-child(3) > .card > .card-body"
+        this.BotonComo = ".navbar-nav > :nth-child(2) > .page-scroll";
+        this.BotonFuncionalidades = ":nth-child(3) > .page-scroll";
+        this.BotonMarcas = ":nth-child(4) > .page-scroll";
+        this.imputMail = ".input-newsletter";
+        this.BotonSubscribe = ".disabled";
+        this.BotonAgencias = ':nth-child(5) > .page-scroll';
+        this.BotonInversores = ":nth-child(6) > .page-scroll";
+        }
+        
+        Boton = () =>{
+            let tiempo=1500
+            cy.get(this.BotonNosotros).click()
+            cy.get(this.PrimerTexto).should('have.text', '¿Por qué Adme es diferente?')
+            cy.get(this.SegundoTexto).should('have.text', 'Adme te reconoce como el principal protagonista en el mundo de las redes sociales. Sin importar cuantos amigos y/o seguidores tengas en tus redes sociales, Adme te considera un Influencer, y te paga por ello')
+            cy.get(this.TercerTexto).should('have.text', 'Tú foto, tú plata')
+            cy.get(this.CuartoTexto).should('have.text', 'Si sós el que crea las fotos, y el que pagó por los productos y servicios que aparecen en ellas ¿por qué no te pagan por compartirla? Adme lo hace posible!')
+            cy.get(this.QuintoTexto).should('have.text', 'Posteá desde una sola app')
+            cy.get(this.SextoTexto).should('have.text', 'La app de Adme te permite postear en todas tus redes sociales al mismo tiempo y desde un solo lugar. Además te permite ganar dinero si quisieras esponsorizarlas.')
+            cy.get(this.SeptimoTexto).should('have.text', 'Ingresos pasivos')
+            cy.get(this.OctavoTexto).should('have.text', 'Adme te paga un porcentaje del dinero que continuamente ganan tus referidos y los referidos de tus referidos. Ganás dinero de manera pasiva.')
+            cy.get(this.IconUno).should('be.visible')
+            cy.get(this.IconDos).should('be.visible')
+            cy.get(this.IconTres).should('be.visible')
+            cy.wait(tiempo)
+            cy.get(this.Hover1).realHover();
+            cy.wait(tiempo)
+            cy.get(this.Hover2).realHover();
+            cy.wait(tiempo)
+            cy.get(this.Hover3).realHover();
+            cy.wait(tiempo)
+            cy.get(this.BotonComo).click()
+            cy.wait(tiempo)
+            cy.get(this.BotonFuncionalidades).click()
+            cy.wait(tiempo)
+        }
+
+        /*Boton2 = () =>{
+            let tiempo=1500
+            cy.get(this.BotonMarcas).click()
+            cy.get(this.imputMail).type("mail1@gmail.com")
+            cy.wait(tiempo)
+            cy.get(this.BotonSubscribe).click()
+            cy.wait(3500)
+            Cypress.on('uncaught:exception', (err, runnable) => {
+                return false    
+            })
+        }*/
+
+        /*Boton3 = () => {
+            let tiempo=1500
+            cy.get(this.BotonAgencias).click()
+            cy.wait(tiempo)
+            cy.get(this.imputMail).type("mail1@gmail.com")
+            cy.wait(tiempo)
+            cy.get(this.BotonSubscribe).click()
+            cy.wait(3500)
+        }
+
+        Boton4 = () => {
+            cy.get(this.BotonInversores).click()
+        }*/
+
+}
+export default new BotonesCabecera();

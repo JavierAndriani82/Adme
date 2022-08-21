@@ -47,6 +47,7 @@
     "concat-map": "^0.0.1",
     "core-util-is": "^1.0.2",
     "cross-spawn": "^7.0.3",
+    "cypress-real-events": "^1.7.1",
     "dashdash": "^1.14.1",
     "dayjs": "^1.11.4",
     "debug": "^4.3.4",
