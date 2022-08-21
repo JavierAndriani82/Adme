@@ -15,16 +15,21 @@ class BotonesCabecera {
         this.Hover1 = ':nth-child(1) > .card > .card-body'
         this.Hover2 = ":nth-child(2) > .card > .card-body"
         this.Hover3 = ":nth-child(3) > .card > .card-body"
-        this.BotonComo = ".navbar-nav > :nth-child(2) > .page-scroll";
-        this.BotonFuncionalidades = ":nth-child(3) > .page-scroll";
-        this.BotonMarcas = ":nth-child(4) > .page-scroll";
-        this.imputMail = ".input-newsletter";
-        this.BotonSubscribe = ".disabled";
-        this.BotonAgencias = ':nth-child(5) > .page-scroll';
-        this.BotonInversores = ":nth-child(6) > .page-scroll";
+        this.IconCuatro = ":nth-child(1) > .p-2 > .fas";
+        this.IconCinco = ":nth-child(2) > .p-2 > .fas";
+        this.IconSeis = ":nth-child(3) > .p-2 > .fas";
+        this.IconSiete = ":nth-child(4) > .p-2 > .fas";
+        this.Number3 = ":nth-child(1) > .p-2 > .count-number";
+        this.Number112 = ":nth-child(2) > .p-2 > .count-number";
+        this.Number16 = ":nth-child(3) > .p-2 > .count-number";
+        this.Number8 = ":nth-child(4) > .p-2 > .count-number";
+        this.NovenoTexto = ":nth-child(1) > .p-2 > :nth-child(3)";
+        this.DecimoTexto = ":nth-child(2) > .p-2 > :nth-child(3)";
+        this.OnceavoTexto = ":nth-child(3) > .p-2 > :nth-child(3)";
+        this.DoceavoTexto = ":nth-child(4) > .p-2 > :nth-child(3)";
         }
         
-        Boton = () =>{
+        Boton = () => {
             let tiempo=1500
             cy.get(this.BotonNosotros).click()
             cy.get(this.PrimerTexto).should('have.text', '¿Por qué Adme es diferente?')
@@ -45,37 +50,18 @@ class BotonesCabecera {
             cy.wait(tiempo)
             cy.get(this.Hover3).realHover();
             cy.wait(tiempo)
-            cy.get(this.BotonComo).click()
-            cy.wait(tiempo)
-            cy.get(this.BotonFuncionalidades).click()
-            cy.wait(tiempo)
+            cy.get(this.IconCuatro).should('be.visible')
+            cy.get(this.IconCinco).should('be.visible')
+            cy.get(this.IconSeis).should('be.visible')
+            cy.get(this.IconSiete).should('be.visible')
+            cy.get(this.Number3).should("have.text", "3")
+            cy.get(this.Number112).should("have.text", "112")
+            cy.get(this.Number16).should("have.text", "16")
+            cy.get(this.Number8).should("have.text", "8")
+            cy.get(this.NovenoTexto).should('have.text', 'Redes Sociales Integradas')
+            cy.get(this.DecimoTexto).should('have.text', 'Usuarios probando la app')
+            cy.get(this.OnceavoTexto).should('have.text', 'Marcas publicitando en Adme')
+            cy.get(this.DoceavoTexto).should('have.text', 'Tipos de monedas integradas')
         }
-
-        /*Boton2 = () =>{
-            let tiempo=1500
-            cy.get(this.BotonMarcas).click()
-            cy.get(this.imputMail).type("mail1@gmail.com")
-            cy.wait(tiempo)
-            cy.get(this.BotonSubscribe).click()
-            cy.wait(3500)
-            Cypress.on('uncaught:exception', (err, runnable) => {
-                return false    
-            })
-        }*/
-
-        /*Boton3 = () => {
-            let tiempo=1500
-            cy.get(this.BotonAgencias).click()
-            cy.wait(tiempo)
-            cy.get(this.imputMail).type("mail1@gmail.com")
-            cy.wait(tiempo)
-            cy.get(this.BotonSubscribe).click()
-            cy.wait(3500)
-        }
-
-        Boton4 = () => {
-            cy.get(this.BotonInversores).click()
-        }*/
-
 }
 export default new BotonesCabecera();
