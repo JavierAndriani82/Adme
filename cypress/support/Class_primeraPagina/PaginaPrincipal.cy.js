@@ -27,6 +27,11 @@ class BotonesCabecera {
         this.DecimoTexto = ":nth-child(2) > .p-2 > :nth-child(3)";
         this.OnceavoTexto = ":nth-child(3) > .p-2 > :nth-child(3)";
         this.DoceavoTexto = ":nth-child(4) > .p-2 > :nth-child(3)";
+        this.BotonComo = ".navbar-nav > :nth-child(2) > .page-scroll";
+        this.BotonFuncionalidades = ":nth-child(3) > .page-scroll";
+        this.BotonMarcas = ":nth-child(4) > .page-scroll";
+        this.imputMail = ".input-newsletter";
+        this.BotonSubscribe = ".disabled";
         }
         
         Boton = () => {
@@ -62,6 +67,32 @@ class BotonesCabecera {
             cy.get(this.DecimoTexto).should('have.text', 'Usuarios probando la app')
             cy.get(this.OnceavoTexto).should('have.text', 'Marcas publicitando en Adme')
             cy.get(this.DoceavoTexto).should('have.text', 'Tipos de monedas integradas')
+        };
+
+        Boton2 = () => {
+            let tiempo=1500
+            cy.get(this.BotonComo).click()
+        cy.wait(tiempo)
+        };
+
+        Boton3 = () => {
+            let tiempo=1500
+            cy.get(this.BotonFuncionalidades).click()
+            cy.wait(tiempo)
+        };
+
+        Boton4 = () =>{
+            let tiempo=1500
+            cy.get(this.BotonMarcas).click()
+            cy.wait(tiempo)
+            cy.get(this.imputMail).type("mail1@gmail.com")
+            cy.wait(tiempo)
+            cy.get(this.BotonSubscribe).click()
+            cy.wait(3500)
+            Cypress.on('uncaught:exception', (err, runnable) => {
+                return false    
+            })
         }
 }
+
 export default new BotonesCabecera();
