@@ -1,6 +1,6 @@
-import PaginaPrincipal from "../../support/Class_primeraPagina/PaginaPrincipal.cy"
+import * as PaginaPrincipal from "../../support/Class_primeraPagina/PaginaPrincipal.cy.js"
 import PaginaPrincipal5 from "../../support/Class_primeraPagina/PaginaPrincipal5.cy";
-import PaginaPrincipal6 from "../../support/Class_primeraPagina/PaginaPrincipal6.cy";
+
 
 
 ///<reference types="cypress" />
@@ -19,10 +19,11 @@ describe("Primer inicio", () => {
     
     it("Boton Nosotros, Boton Como, Funcionalidades y Marcas", () => {
         
-        PaginaPrincipal.Boton()
-        PaginaPrincipal.Boton2()
-        PaginaPrincipal.Boton3()
-        PaginaPrincipal.Boton4()
+        const Cabecera = new PaginaPrincipal.BotonesCabecera();
+        Cabecera.Boton()
+        Cabecera.Boton2()
+        Cabecera.Boton3()
+        Cabecera.Boton4()
 
     })
 
@@ -31,7 +32,9 @@ describe("Primer inicio", () => {
     })
 
     it("Boton Inversores", () => {
-        PaginaPrincipal6.Boton6()
+        
+        const Cabecera2 = new PaginaPrincipal.BotonesCabecera6();
+        Cabecera2.Boton6()
     })
 
 })

@@ -1,4 +1,4 @@
-class BotonesCabecera {
+export class BotonesCabecera {
     constructor() {
         this.BotonNosotros = ".navbar-nav > :nth-child(1) > .page-scroll";
         this.PrimerTexto = ".col-md-10 > .section-heading > h2";
@@ -95,4 +95,13 @@ class BotonesCabecera {
         }
 }
 
-export default new BotonesCabecera();
+export class BotonesCabecera6 {
+    constructor () {
+        this.BotonInversores = ":nth-child(6) > .page-scroll";
+    }
+
+    Boton6 = () => {
+            cy.get(this.BotonInversores).click()
+        }
+}
+
