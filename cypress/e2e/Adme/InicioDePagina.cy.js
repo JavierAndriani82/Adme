@@ -28,13 +28,15 @@ describe("Primer inicio", () => {
     })
 
     it("Pantalla Agencias", () => {
-        PaginaPrincipal5.Boton5()
+
+        const Cabecera2 = new PaginaPrincipal.BotonesCabecera2();
+        Cabecera2.Boton5()
     })
 
     it("Boton Inversores", () => {
         
-        const Cabecera2 = new PaginaPrincipal.BotonesCabecera6();
-        Cabecera2.Boton6()
+        const Cabecera3 = new PaginaPrincipal.BotonesCabecera3();
+        Cabecera3.Boton6()
     })
 
 })
