@@ -1,5 +1,5 @@
 import * as PaginaPrincipal from "../../support/Class_primeraPagina/PaginaPrincipal.cy.js"
-import PaginaPrincipal5 from "../../support/Class_primeraPagina/PaginaPrincipal5.cy";
+
 
 
 

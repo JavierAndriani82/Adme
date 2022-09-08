@@ -27,7 +27,31 @@ export class BotonesCabecera {
         this.DecimoTexto = ":nth-child(2) > .p-2 > :nth-child(3)";
         this.OnceavoTexto = ":nth-child(3) > .p-2 > :nth-child(3)";
         this.DoceavoTexto = ":nth-child(4) > .p-2 > :nth-child(3)";
+        //Boton Como
         this.BotonComo = ".navbar-nav > :nth-child(2) > .page-scroll";
+        this.TextoUno = "#process > .container > .justify-content-center > .col-md-9 > .section-heading > h2"
+        this.TextoDos = "#process > .container > .justify-content-center > .col-md-9 > .section-heading > p"
+        this.TextoTres = ":nth-child(1) > .process-icon-item > .d-flex > .process-content > h5"
+        this.TextoCuatro = ":nth-child(1) > .process-icon-item > .d-flex > .process-content > p"
+        this.TextoCinco = ":nth-child(2) > .process-icon-item > .d-flex > .process-content > h5"
+        this.TextoSeis = ":nth-child(2) > .process-icon-item > .d-flex > .process-content > p"
+        this.TextoSiete = ":nth-child(3) > .process-icon-item > .d-flex > .process-content > h5"
+        this.TextoOcho = ":nth-child(3) > .process-icon-item > .d-flex > .process-content > p"
+        this.IconoUno = ":nth-child(1) > .process-icon-item > .d-flex > .process-icon > .fas"
+        this.IconoDos = ":nth-child(2) > .process-icon-item > .d-flex > .process-icon > .fas"
+        this.IconoTres = ":nth-child(3) > .process-icon-item > .d-flex > .process-icon > .fas"
+        this.IconoCuatro = ":nth-child(1) > .mt-2 > .fas"
+        this.IconoCinco = ":nth-child(2) > .mt-2 > .fas"
+        this.Imagen = "#process > .container > .justify-content-md-center > .col-md-6 > .img-wrap > .img-fluid"
+        this.Imagen2 = ".mask-image > .img-fluid"
+        this.TextoNueve = ".feature-contents > h2"
+        this.TextoDiez = ".feature-contents > :nth-child(2)"
+        this.TextoOnce = ":nth-child(1) > .vertical-list-info > strong"
+        this.TextoDoce = ":nth-child(1) > .vertical-list-info > p"
+        this.TextoTrece = ":nth-child(2) > .vertical-list-info > strong"
+        this.TextoCatorce = ":nth-child(2) > .vertical-list-info > p"
+
+        //Boton Funcionalidades
         this.BotonFuncionalidades = ":nth-child(3) > .page-scroll";
         this.BotonMarcas = ":nth-child(4) > .page-scroll";
         this.imputMail = ".input-newsletter";
@@ -72,6 +96,38 @@ export class BotonesCabecera {
         Boton2 = () => {
             let tiempo=1500
             cy.get(this.BotonComo).click()
+            cy.get(this.TextoUno).should('have.text', 'Ganar dinero con Adme es muy sencillo')
+            cy.get(this.TextoDos).should('have.text', 'Adme pone a tu disposición las campañas publicitarias de las marcas que buscan personas como vos para promocionar sus productos y servicios.')
+            cy.get(this.TextoTres).should('have.text', 'Selfie')
+            cy.get(this.TextoCuatro).should('have.text', 'Sacate una foto como usualmente lo haces.')
+            cy.get(this.TextoCinco).should('have.text', 'Esponsorizala y compartila')
+            cy.get(this.TextoSeis).should('have.text', 'Antes de subirla en tus redes sociales habituales (Facebook, Instagram, Twitter y otras) esponsorizala con alguna campaña publicitaria relacionada a algún producto o servicio que aparecen en ella.')
+            cy.get(this.TextoSiete).should('have.text', 'Recibe el pago')
+            cy.get(this.TextoOcho).should('have.text', 'Una vez que tu foto es evaluada y aprobada, simplemente recibís el pago.')
+            cy.get(this.Imagen).should("be.visible").and(([img]) => {
+                expect(img.naturalWidth).to.equal(3542);
+                expect(img.naturalHeight).to.equal(3751);
+
+            } )
+            cy.get(this.TextoNueve).should('have.text', 'Ingresos pasivos')
+            cy.get(this.TextoDiez).should('have.text', 'Con Adme no solo ganás dinero por subir tus fotos, sino que también ganás dinero de manera pasiva.')
+            cy.get(this.TextoOnce).should('have.text', 'El Mejor Programa De Referidos')
+            cy.get(this.TextoDoce).should('have.text', 'Toda persona que se sume a Adme gracias a tu invitación, o a la invitación de tus invitados, conformarán tu clan. Y lo bueno es que todos ellos (sin importar que tan profundo estén en tu red de referidos) te harán ganar dinero, ya que Adme te recompenza con un porcetaje de sus ganancias, cada vez que suceda.')
+            cy.get(this.TextoTrece).should('have.text', 'El éxito de tus posts')
+            cy.get(this.TextoCatorce).should('have.text', 'Después de recibir el pago por compartir una foto, seguiras recibiendo dinero de acuerdo al éxito de la misma entre tus amigos y seguidores. Adme también te paga por cada like, comentario y otras reacciones.')
+            cy.get(this.IconoUno).should("be.visible")
+            cy.get(this.IconoDos).should("be.visible")
+            cy.get(this.IconoTres).should("be.visible")
+            cy.get(this.IconoCuatro).should("be.visible")
+            cy.get(this.IconoCinco).should("be.visible")
+            cy.get(this.Imagen2).should("be.visible").and(([img]) => {
+                expect(img.naturalWidth).to.equal(1580);
+                expect(img.naturalHeight).to.equal(1289);
+
+            } )
+
+
+
         cy.wait(tiempo)
         };
 
