@@ -1,3 +1,5 @@
+
+
 export class BotonesCabecera {
     constructor() {
         this.BotonNosotros = ".navbar-nav > :nth-child(1) > .page-scroll";
@@ -53,6 +55,7 @@ export class BotonesCabecera {
 
         //Boton Funcionalidades
         this.BotonFuncionalidades = ":nth-child(3) > .page-scroll";
+        //Boton Marcas
         this.BotonMarcas = ":nth-child(4) > .page-scroll";
         this.imputMail = ".input-newsletter";
         this.BotonSubscribe = ".disabled";
@@ -135,6 +138,7 @@ export class BotonesCabecera {
             let tiempo=1500
             cy.get(this.BotonFuncionalidades).click()
             cy.wait(tiempo)
+            
         };
 
         Boton4 = () =>{

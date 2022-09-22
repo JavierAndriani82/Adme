@@ -1,8 +1,6 @@
 import * as PaginaPrincipal from "../../support/Class_primeraPagina/PaginaPrincipal.cy.js"
 
 
-
-
 ///<reference types="cypress" />
 import "cypress-real-events/support";
 
