@@ -18,23 +18,27 @@ describe("Primer inicio", () => {
     it("Boton Nosotros, Boton Como, Funcionalidades y Marcas", () => {
         
         const Cabecera = new PaginaPrincipal.BotonesCabecera();
+        const Cabecera2 = new PaginaPrincipal.BotonesCabecera2();
+        const Cabecera3 = new PaginaPrincipal.BotonesCabecera3();
+        const Cabecera4 = new PaginaPrincipal.BotonesCabecera4();
+
         Cabecera.Boton()
-        Cabecera.Boton2()
-        Cabecera.Boton3()
-        Cabecera.Boton4()
+        Cabecera2.Boton2()
+        Cabecera3.Boton3()
+        Cabecera4.Boton4()
 
     })
 
     it("Pantalla Agencias", () => {
 
-        const Cabecera2 = new PaginaPrincipal.BotonesCabecera2();
-        Cabecera2.Boton5()
+        const Cabecera5 = new PaginaPrincipal.BotonesCabecera5();
+        Cabecera5.Boton5()
     })
 
     it("Boton Inversores", () => {
         
-        const Cabecera3 = new PaginaPrincipal.BotonesCabecera3();
-        Cabecera3.Boton6()
+        const Cabecera6 = new PaginaPrincipal.BotonesCabecera6();
+        Cabecera6.Boton6()
     })
 
 })
