@@ -1,5 +1,6 @@
 
 
+
 export class BotonesCabecera {
     constructor() {
         this.BotonNosotros = ".navbar-nav > :nth-child(1) > .page-scroll";
@@ -137,12 +138,102 @@ export class BotonesCabecera3 {
     constructor () {
     
         this.BotonFuncionalidades = ":nth-child(3) > .page-scroll";
+        this.Texto1 = "#features > .container > .justify-content-center > .col-md-9 > .section-heading > h2"
+        this.Texto2 = "#features > .container > .justify-content-center > .col-md-9 > .section-heading > p"
+        this.Texto3 = ":nth-child(1) > .row > :nth-child(1) > .d-flex > .icon-text > .mb-2"
+        this.Texto4 = ":nth-child(1) > .row > :nth-child(1) > .d-flex > .icon-text > p"
+        this.Texto5 = ":nth-child(1) > .row > :nth-child(2) > .d-flex > .icon-text > .mb-2"
+        this.Texto6 = ":nth-child(1) > .row > :nth-child(2) > .d-flex > .icon-text > p"
+        this.Texto7 = ":nth-child(1) > .row > :nth-child(3) > .d-flex > .icon-text > .mb-2"
+        this.Texto8 = ":nth-child(1) > .row > :nth-child(3) > .d-flex > .icon-text > p"
+        this.Texto9 = ":nth-child(3) > .row > :nth-child(1) > .d-flex > .icon-text > .mb-2"
+        this.Texto10 = ":nth-child(3) > .row > :nth-child(1) > .d-flex > .icon-text > p"
+        this.Texto11 = ":nth-child(3) > .row > :nth-child(2) > .d-flex > .icon-text > .mb-2"
+        this.Texto12 = ":nth-child(3) > .row > :nth-child(2) > .d-flex > .icon-text > p"
+        this.Texto13 = ":nth-child(3) > .row > :nth-child(3) > .d-flex > .icon-text > .mb-2"
+        this.Texto14 = ":nth-child(3) > .row > :nth-child(3) > .d-flex > .icon-text > p"
+        this.img = "[alt='placeholder']"
+        this.icon1 = ".ti-gallery"
+        this.icon2 = ".ti-shield"
+        this.icon3 = ".ti-target"
+        this.icon4 = ".ti-announcement"
+        this.icon5 = ".ti-thumb-up"
+        this.icon6 = ".ti-money"
+        this.Texto15 = ".testimonial-heading > .text-white"
+        this.Texto16 = ".testimonial-heading > p"
+        this.PrimerComentario = "[role='button']"
+        this.img2 = "[alt='client']"
+        this.Texto17 = ".active > .item > .testimonial-quote-wrap > .media > .media-body > .mb-0"
+        this.Texto18 = ".active > .item > .testimonial-quote-wrap > .media > .media-body > span"
+        this.Texto19 = ".active > .item > .testimonial-quote-wrap > .client-say > p"
+        this.SegundoComentario = "[role='button']"
+        this.img3 = "[alt='client']"
+        this.Texto20 = ".active > .item > .testimonial-quote-wrap > .media > .media-body > .mb-0"
+        this.Texto21 = ".active > .item > .testimonial-quote-wrap > .media > .media-body > span"
+        this.TercerComentario = "[role='button']"
+        this.img4 = "[alt='client']"
+        this.Texto22 = ".active > .item > .testimonial-quote-wrap > .media > .media-body > .mb-0"
+        this.Texto23 = ".active > .item > .testimonial-quote-wrap > .media > .media-body > span"
+        
+
+
+
     }
 
     Boton3 = () => {
         let tiempo=1500
         cy.get(this.BotonFuncionalidades).click()
         cy.wait(tiempo)
+        cy.get(this.Texto1).should("have.text", "Funcionalidades de Adme")
+        cy.get(this.Texto2).should("have.text", "Adme es la primer plataforma que cree que todo usuario de redes sociales es un influencer. Es por ésta razón que Adme transforma los benefícios que las marcas obtinen por las influencis de tus fotos en recompenzas monetarias al protagonista de toda ésta historia, vos 🤟")
+        cy.get(this.Texto3).should("have.text", "Una sola app para todas tus redes sociales")
+        cy.get(this.Texto4).should("have.text", "Con la app de Adme puedes postear al mismo tiempo en todas tus redes sociales habituales. 📱")
+        cy.get(this.Texto5).should("have.text", "Fotos espponsorizadas")
+        cy.get(this.Texto6).should("have.text", "Si la foto que estás por postear contiene algún producto, servicio o lugar, entonces podrías esponsorizarla con una comapañ publicitaria relacionada. 💰💰💰")
+        cy.get(this.Texto7).should("have.text", "Fotos a pedido")
+        cy.get(this.Texto8).should("have.text", "También podés crear fotos seguiendo las especificaciones de alguna campaña publicitaria que creas apropieada para vos. 💰💰💰")
+        cy.get(this.Texto9).should("have.text", "Compartir Spot publicitarios")
+        cy.get(this.Texto10).should("have.text", "También podrías ganar dinero simplemente compartiendo un spot publicitario creado por la marca. 💰💰💰")
+        cy.get(this.Texto11).should("have.text", "Mas likes, mas ganancias")
+        cy.get(this.Texto12).should("have.text", "Después de ganar dinero por postear una foto sponsorizada, continueas incrementando tus ganancias por el éxito de la misma. 💰💰💰")
+        cy.get(this.Texto13).should("have.text", "Ingresos pasivos desde tu red de referidos")
+        cy.get(this.Texto14).should("have.text", "Cada vez que tus referidos o los referidos de tus referidos ganen dinero, vos también ganaras un porcentaje del mismo. 💰💰💰")
+        cy.get(this.img).should("be.visible").and(([img])=> {
+            expect(img.naturalWidth).to.equal(408);
+            expect(img.naturalHeight).to.equal(524);
+        } )
+        cy.get(this.icon1).should('be.visible')
+        cy.get(this.icon2).should('be.visible')
+        cy.get(this.icon3).should('be.visible')
+        cy.get(this.icon4).should('be.visible')
+        cy.get(this.icon5).should('be.visible')
+        cy.get(this.icon6).should('be.visible')
+        cy.get(this.Texto15).should('have.text', 'Lo que opina la gente sobre ésta nueva propuesta' )
+        cy.get(this.Texto16).should('have.text', 'El nuevo paradigma propuesto por Adme está focalizado a satisfacer, principalmente, las nacesidades los los usuarios de redes sociales. Esto es lo que opinan sobre ésta nueva propuesta!')
+        cy.get(this.PrimerComentario).eq(0).click()
+        cy.get(this.img2).eq(0).should("not.be.visible").and(([img2]) => {
+            expect(img2.naturalWidth).to.equal(500);
+            expect(img2.naturalHeight).to.equal(501);
+        })
+        cy.get(this.Texto17).should('have.text', 'Giselle Yaccuzzy')
+        cy.get(this.Texto18).should('have.text', 'Usuario de Facebook e Instagram')
+        cy.get(this.Texto19).should('have.text', 'Es muy emocionante saber que llegó una red social que entiende que al compartir una foto en mis redes sociales habituales, estoy influenciando a mis amigos y seguidores a que consuman los productos y servicios que aparecen en ella 😍')
+        cy.get(this.SegundoComentario).eq(1).click()
+        cy.get(this.img3).eq(1).should("not.be.visible").and(([img3]) => {
+            expect(img3.naturalWidth).to.equal(500);
+            expect(img3.naturalHeight).to.equal(501);
+        })
+        cy.get(this.Texto20).should("contain.text", "María Fernanda Iglesias")
+        cy.get(this.Texto21).should("contain.text", "Actriz. (@marifernandai) • Instagram")
+        cy.get(this.SegundoComentario).eq(2).click()
+        cy.get(this.img4).eq(2).should("not.be.visible").and(([img4]) => {
+            expect(img4.naturalWidth).to.equal(1000);
+            expect(img4.naturalHeight).to.equal(1002);
+        })
+        cy.get(this.Texto22).should("contain.text", "Gonzalo Abadie")
+        cy.get(this.Texto23).should("contain.text", "Actor, (@Gonzactor) • Twitter")
+        
+        
         
     };
 }
