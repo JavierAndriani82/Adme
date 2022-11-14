@@ -68,3 +68,54 @@ export class botonComo {
         this.elements.BotonComo()
     }
 }
+
+export class botonFuncionalidades {
+
+    elements = {
+    
+    botonFuncionalidades: () => cy.get(":nth-child(3) > .page-scroll").click(),
+    textoUno: () => cy.get("#features > .container > .justify-content-center > .col-md-9 > .section-heading > h2"),
+    textoDos: () => cy.get("#features > .container > .justify-content-center > .col-md-9 > .section-heading > p"),
+    textoTres: () => cy.get(":nth-child(1) > .row > :nth-child(1) > .d-flex > .icon-text > .mb-2"),
+    textoCuatro: () => cy.get(":nth-child(1) > .row > :nth-child(1) > .d-flex > .icon-text > p"), 
+    textoCinco: () => cy.get(":nth-child(1) > .row > :nth-child(2) > .d-flex > .icon-text > .mb-2"), 
+    textoSeis: () => cy.get(":nth-child(1) > .row > :nth-child(2) > .d-flex > .icon-text > p"), 
+    textoSiete: () => cy.get(":nth-child(1) > .row > :nth-child(3) > .d-flex > .icon-text > .mb-2"), 
+    textoOcho: () => cy.get(":nth-child(1) > .row > :nth-child(3) > .d-flex > .icon-text > p"), 
+    textoNueve: () => cy.get(":nth-child(3) > .row > :nth-child(1) > .d-flex > .icon-text > .mb-2"), 
+    textoDiez: () => cy.get(":nth-child(3) > .row > :nth-child(1) > .d-flex > .icon-text > p"), 
+    textoOnce: () => cy.get(":nth-child(3) > .row > :nth-child(2) > .d-flex > .icon-text > .mb-2"), 
+    textoDoce: () => cy.get(":nth-child(3) > .row > :nth-child(2) > .d-flex > .icon-text > p"), 
+    textoTrece: () => cy.get(":nth-child(3) > .row > :nth-child(3) > .d-flex > .icon-text > .mb-2"), 
+    textoCatorce: () => cy.get(":nth-child(3) > .row > :nth-child(3) > .d-flex > .icon-text > p"), 
+    img: () => cy.get("[alt='placeholder']"),
+    iconOne: () => cy.get(".ti-gallery"), 
+    iconTwo: () => cy.get(".ti-shield"), 
+    iconThree: () => cy.get(".ti-target"), 
+    iconFour: () => cy.get(".ti-announcement"), 
+    iconFive: () => cy.get(".ti-thumb-up"), 
+    iconSix: () => cy.get(".ti-money"), 
+    textoQuince: () => cy.get(".testimonial-heading > .text-white"), 
+    textoDieciseis: () => cy.get(".testimonial-heading > p"), 
+    primerComentario: () => cy.get("[role='button']"), 
+    img2: () => cy.get("[alt='client']"), 
+    textoDiecisiete: () => cy.get(".active > .item > .testimonial-quote-wrap > .media > .media-body > .mb-0"),
+    textoDieceocho: () => cy.get(".active > .item > .testimonial-quote-wrap > .media > .media-body > span"),
+    textoDiecinueve: () => cy.get(".active > .item > .testimonial-quote-wrap > .client-say > p"),
+    segundoComentario: () => cy.get("[role='button']"),
+    img3: () => cy.get("[alt='client']"),
+    textoVeinte: () => cy.get(".active > .item > .testimonial-quote-wrap > .media > .media-body > .mb-0"),
+    textoVeintiuno: () => cy.get(".active > .item > .testimonial-quote-wrap > .media > .media-body > span"),
+    tercerComentario: () => cy.get("[role='button']"),
+    img4: () => cy.get("[alt='client']"),
+    textoVeintidos: () => cy.get(".active > .item > .testimonial-quote-wrap > .media > .media-body > .mb-0"),
+    textoVeintitres: () => cy.get(".active > .item > .testimonial-quote-wrap > .media > .media-body > span"),
+
+    }
+
+    clickFuncionalidades() {
+
+        this.elements.botonFuncionalidades()
+    }
+
+}

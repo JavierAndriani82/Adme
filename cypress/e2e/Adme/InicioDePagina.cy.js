@@ -56,7 +56,6 @@ describe("Primer inicio", () => {
 
     it ("Validando Boton Como", () => {
 
-        let tiempo= 1500;
         const Cabeceras2= new classBotones.botonComo;
         Cabeceras2.clickComo();
         Cabeceras2.elements.TextoUno().should('have.text', 'Ganar dinero con Adme es muy sencillo')
@@ -85,12 +84,65 @@ describe("Primer inicio", () => {
         Cabeceras2.elements.Imagen2().should("be.visible").and(([img]) => {
             expect(img.naturalWidth).to.equal(1580);
             expect(img.naturalHeight).to.equal(1289);
-
         } )
+        cy.wait(1500)
         
-        
+    })
+    
+    it.only ("Boton Funcionalidades", () => {
 
+        const Cabeceras3= new classBotones.botonFuncionalidades;
+        Cabeceras3.clickFuncionalidades();
+        cy.wait(1500)
+        Cabeceras3.elements.textoUno().should("have.text", "Funcionalidades de Adme")
+        Cabeceras3.elements.textoDos().should("have.text", "Adme es la primer plataforma que cree que todo usuario de redes sociales es un influencer. Es por ésta razón que Adme transforma los benefícios que las marcas obtinen por las influencis de tus fotos en recompensas monetarias al protagonista de toda ésta historia, vos 🤟")
+        Cabeceras3.elements.textoTres().should("have.text", "Una sola app para todas tus redes sociales")
+        Cabeceras3.elements.textoCuatro().should("have.text", "Con la app de Adme puedes postear al mismo tiempo en todas tus redes sociales habituales. 📱")
+        Cabeceras3.elements.textoCinco().should("have.text", "Fotos espponsorizadas")
+        Cabeceras3.elements.textoSeis().should("have.text", "Si la foto que estás por postear contiene algún producto, servicio o lugar, entonces podrías esponsorizarla con una comapañ publicitaria relacionada. 💰💰💰")
+        Cabeceras3.elements.textoSiete().should("have.text", "Fotos a pedido")
+        Cabeceras3.elements.textoOcho().should("have.text", "También podés crear fotos seguiendo las especificaciones de alguna campaña publicitaria que creas apropieada para vos. 💰💰💰")
+        Cabeceras3.elements.textoNueve().should("have.text", "Compartir Spot publicitarios")
+        Cabeceras3.elements.textoDiez().should("have.text", "También podrías ganar dinero simplemente compartiendo un spot publicitario creado por la marca. 💰💰💰")
+        Cabeceras3.elements.textoOnce().should("have.text", "Mas likes, mas ganancias")
+        Cabeceras3.elements.textoDoce().should("have.text", "Después de ganar dinero por postear una foto sponsorizada, continueas incrementando tus ganancias por el éxito de la misma. 💰💰💰")
+        Cabeceras3.elements.textoTrece().should("have.text", "Ingresos pasivos desde tu red de referidos")
+        Cabeceras3.elements.textoCatorce().should("have.text", "Cada vez que tus referidos o los referidos de tus referidos ganen dinero, vos también ganaras un porcentaje del mismo. 💰💰💰")        
+        Cabeceras3.elements.img().should("be.visible").and(([img])=> {
+        expect(img.naturalWidth).to.equal(408);
+        expect(img.naturalHeight).to.equal(524);
+    } ) 
+        Cabeceras3.elements.iconOne().should('be.visible')    
+        Cabeceras3.elements.iconTwo().should('be.visible')
+        Cabeceras3.elements.iconThree().should('be.visible')
+        Cabeceras3.elements.iconFour().should('be.visible')
+        Cabeceras3.elements.iconFive().should('be.visible')
+        Cabeceras3.elements.iconSix().should('be.visible')
+        Cabeceras3.elements.textoQuince().should('have.text', 'Lo que opina la gente sobre ésta nueva propuesta')
+        Cabeceras3.elements.textoDieciseis().should('have.text', 'El nuevo paradigma propuesto por Adme está focalizado a satisfacer, principalmente, las nacesidades los los usuarios de redes sociales. Esto es lo que opinan sobre ésta nueva propuesta!')
+        Cabeceras3.elements.primerComentario().eq(0).click()
+        Cabeceras3.elements.img2().eq(0).should("not.be.visible").and(([img2]) => {
+            expect(img2.naturalWidth).to.equal(500);
+            expect(img2.naturalHeight).to.equal(501);
+        })
+        Cabeceras3.elements.textoDiecisiete().should('have.text', 'Giselle Yaccuzzy')
+        Cabeceras3.elements.textoDieceocho().should('have.text', 'Usuario de Facebook e Instagram')
+        Cabeceras3.elements.textoDiecinueve().should('have.text', 'Es muy emocionante saber que llegó una red social que entiende que al compartir una foto en mis redes sociales habituales, estoy influenciando a mis amigos y seguidores a que consuman los productos y servicios que aparecen en ella 😍')
+        Cabeceras3.elements.segundoComentario().eq(1).click()
+        Cabeceras3.elements.img3().eq(1).should("not.be.visible").and(([img3]) => {
+            expect(img3.naturalWidth).to.equal(500);
+            expect(img3.naturalHeight).to.equal(501);
+        })
+        Cabeceras3.elements.textoVeinte().should("contain.text", "María Fernanda Iglesias")
+        Cabeceras3.elements.textoVeintiuno().should("contain.text", "Actriz. (@marifernandai) • Instagram")
+        Cabeceras3.elements.tercerComentario().eq(2).click()
+        Cabeceras3.elements.img4().eq(2).should("not.be.visible").and(([img4]) => {
+            expect(img4.naturalWidth).to.equal(1000);
+            expect(img4.naturalHeight).to.equal(1002);
+        })
+        Cabeceras3.elements.textoVeintidos().should("contain.text", "Gonzalo Abadie")
+        Cabeceras3.elements.textoVeintitres().should("contain.text", "Actor, (@Gonzactor) • Twitter")    
 
     })
-
+    
 })
