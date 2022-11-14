@@ -1,4 +1,3 @@
-import * as PaginaPrincipal from "../../support/Class_primeraPagina/PaginaPrincipal.cy.js"
 import * as classBotones from '../../support/Class_primeraPagina/classBotones.cy.js'
 
 ///<reference types="cypress" />
