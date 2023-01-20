@@ -1,7 +1,7 @@
 export class botonNosotros {
     
     elements = {
-        botonNosotros: () => cy.get(".navbar-nav > :nth-child(1) > .page-scroll").click(),
+        botonNosotros: () => cy.get(".navbar-nav > :nth-child(1) > .page-scroll"),
         primerTexto: () => cy.get(".col-md-10 > .section-heading > h2"),
         segundoTexto: () => cy.get(".col-md-10 > .section-heading > p"),
         tercerTexto: () => cy.get(":nth-child(1) > .card > .card-body > .pt-2 > h5"),
@@ -32,7 +32,7 @@ export class botonNosotros {
     }
 
     clickNosotros() {
-        this.elements.botonNosotros()
+        this.elements.botonNosotros().click()
     }
 }
 
@@ -40,7 +40,7 @@ export class botonComo {
 
     elements = {
 
-        BotonComo: () => cy.get(".navbar-nav > :nth-child(2) > .page-scroll").click(),
+        BotonComo: () => cy.get(".navbar-nav > :nth-child(2) > .page-scroll"),
         TextoUno: () => cy.get("#process > .container > .justify-content-center > .col-md-9 > .section-heading > h2"),  
         TextoDos: () => cy.get("#process > .container > .justify-content-center > .col-md-9 > .section-heading > p"),  
         TextoTres: () => cy.get(":nth-child(1) > .process-icon-item > .d-flex > .process-content > h5"),  
@@ -65,7 +65,7 @@ export class botonComo {
     }
 
     clickComo() {
-        this.elements.BotonComo()
+        this.elements.BotonComo().click()
     }
 }
 
@@ -73,7 +73,7 @@ export class botonFuncionalidades {
 
     elements = {
     
-    botonFuncionalidades: () => cy.get(":nth-child(3) > .page-scroll").click(),
+    botonFuncionalidades: () => cy.get(":nth-child(3) > .page-scroll"),
     textoUno: () => cy.get("#features > .container > .justify-content-center > .col-md-9 > .section-heading > h2"),
     textoDos: () => cy.get("#features > .container > .justify-content-center > .col-md-9 > .section-heading > p"),
     textoTres: () => cy.get(":nth-child(1) > .row > :nth-child(1) > .d-flex > .icon-text > .mb-2"),
@@ -115,7 +115,74 @@ export class botonFuncionalidades {
 
     clickFuncionalidades() {
 
-        this.elements.botonFuncionalidades()
+        this.elements.botonFuncionalidades().click()
     }
 
 }
+
+export class faq {
+
+    elements = {
+
+        desplazarse: () => cy.contains('FAQ'),
+        preguntasFrecuentes: () => cy.get('#faq > .container > .justify-content-center > .col-md-9 > .section-heading > h2'),
+        textoFaqUno: () => cy.get('#faq > .container > .justify-content-center > .col-md-9 > .section-heading > p'),
+        textoUno: () => cy.get('.mb-3 > .card-header > .mb-0'),
+        textoBotonUno: () => cy.get('.mb-3 > .card-header'),
+        textoDentroUno: () => cy.get('#collapse0 > .card-body > p'),
+        textoDos: () => cy.get(':nth-child(2) > .card-header > .mb-0'),
+        textoBotonDos: () => cy.get(':nth-child(2) > .card-header'),
+        textoDentroDos: () => cy.get('#collapse1 > .card-body > p'),
+        textoTres: () => cy.get(':nth-child(3) > .card-header > .mb-0'),
+        textoBotonTres: () => cy.get(':nth-child(3) > .card-header'),
+        textoDentroTres: () => cy.get('#collapse2 > .card-body > p'),
+        textoCuatro: () => cy.get(':nth-child(4) > .card-header > .mb-0'),
+        textoBotonCuatro: () => cy.get(':nth-child(4) > .card-header'),
+        textoDentroCuatro: () => cy.get('#collapse3 > .card-body > p'),
+        textoCinco: () => cy.get(':nth-child(5) > .card-header > .mb-0'),
+        textoBotonCinco: () => cy.get(':nth-child(5) > .card-header'),
+        textoDentroCinco: () => cy.get('#collapse4 > .card-body > p'),
+        textoSeis: () => cy.get(':nth-child(6) > .card-header > .mb-0'),
+        textoBotonSeis: () => cy.get(':nth-child(6) > .card-header'),
+        textoDentroSeis: () => cy.get('#collapse5 > .card-body > p'),
+        img: () => cy.get('.img-fluid'),
+
+
+    }
+
+    clickFaq() {
+        this.elements.desplazarse().scrollIntoView()
+    }
+
+    botonPreguntas() {
+        this.elements.desplazarse().click()
+    }
+
+    botonOne() {
+        this.elements.textoBotonUno().click()
+    }
+
+    botonTwo() {
+        this.elements.textoBotonDos().click()
+    }
+
+    botonThree() {
+        this.elements.textoBotonTres().click()
+    }
+
+    botonFour() {
+        this.elements.textoBotonCuatro().click()
+    }
+
+    botonFive() {
+        this.elements.textoBotonCinco().click()
+    }
+
+    botonSix() {
+        this.elements.textoBotonSeis().click()
+    }
+}
+
+
+
+

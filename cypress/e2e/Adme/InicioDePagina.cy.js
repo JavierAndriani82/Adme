@@ -4,10 +4,11 @@ import * as classBotones from '../../support/Class_primeraPagina/classBotones.cy
 import "cypress-real-events/support";
 require('cypress-xpath');
 
-describe("Primer inicio", () => {
+describe("Validando botones", () => {
     before(() => {
         cy.visit("https://adme.com.ar")
         cy.title('eq', 'Adme - The social network that pays money')
+        cy.wait(2000)
         })
 
     after(() => {
@@ -88,7 +89,7 @@ describe("Primer inicio", () => {
         
     })
     
-    it.only ("Boton Funcionalidades", () => {
+    it ("Boton Funcionalidades", () => {
 
         const Cabeceras3= new classBotones.botonFuncionalidades;
         Cabeceras3.clickFuncionalidades();
@@ -143,5 +144,43 @@ describe("Primer inicio", () => {
         Cabeceras3.elements.textoVeintitres().should("contain.text", "Actor, (@Gonzactor) • Twitter")    
 
     })
+
+    it ("Validando FAQ", () => {
+
+        const Cabeceras4= new classBotones.faq
+        Cabeceras4.clickFaq()
+        Cabeceras4.botonPreguntas()
+        Cabeceras4.elements.preguntasFrecuentes().should('have.text', 'Preguntas Frecuentes')
+        Cabeceras4.elements.textoFaqUno().should('have.text', 'Sabemos que cuesta entender que una red social le pague a sus usuarios, pero es así. Adme lo hace! Si aún tienes preguntas, contactanos!')
+        Cabeceras4.elements.textoSeis().should('have.text', '¿En que monedas me pagan? 🤝')
+        Cabeceras4.botonSix()
+        Cabeceras4.elements.textoDentroSeis().should('have.text', 'Adme permite recibir pagos en 6 moneras de Latino America, Dollar Americanos y Crypto monedas.')
+        cy.wait(1500)
+        Cabeceras4.elements.textoCinco().should('have.text', '¿Por qué es tán importante en referir a mis amigos? 🏂')
+        Cabeceras4.botonFive()
+        Cabeceras4.elements.textoDentroCinco().should('have.text', 'Porque cada persona que se suma a Adme estará debajo de uno y solo un referente directo. Por lo tanto si tus amigos son referidos por alguien más, pierdes la oportunidad de sumarlos a tu red y, por lo tanto, la de oportunudad de ganar dinero por el éxito que tengan ellos mismos su red debajo.')
+        cy.wait(1500)
+        Cabeceras4.elements.textoCuatro().should('have.text', '¿Hay alguna otra forma de ganar dinero con Adme? 💸')
+        Cabeceras4.botonFour()
+        Cabeceras4.elements.textoDentroCuatro().should('have.text', "Si claro, nosotros lo llamamos 'Ingresos pasivos'. Una de las maneras es aumentando tu red de referidos, ya que de manera continuamente recibirás un porcentaje del dinero que ellos vayan ganando. Cualquier persona, sea referido directo o referido de tus referidos te harán ganar dinero. Sin importar que tan abajo en tu red se encuentren.")
+        cy.wait(1500)
+        Cabeceras4.elements.textoTres().should('have.text', '¿Importa si mis fotos reciben reacciones? 👍 😱 🤩 🤪 ❤️')
+        Cabeceras4.botonThree()
+        Cabeceras4.elements.textoDentroTres().should('have.text', 'Claro que sí importa, ya que Adme no solo te paga por postar fotos en tus redes sociales, sino que también te paga por el éxito que las mísmas consigan entre tus amigos y seguidores. Lo cual es medido por la reacciones que éstas consigan.')
+        cy.wait(1500)
+        Cabeceras4.elements.textoDos().should('have.text', '¿Es importante la calidad de mis posteos? ✅ 💰')
+        Cabeceras4.botonTwo()
+        Cabeceras4.elements.textoDentroDos().should('have.text', 'Si, es muy importante, porque para recibir el pago por una foto, la misma debe ser validada y aprobada, primero, por el Departamento de Calidad de Adme y finalmente por el Departamento de Calidad de marca dueña de la campaña publicitaria.')
+        cy.wait(1500)
+        Cabeceras4.elements.textoUno().should('have.text', '¿Me pagan si uso mis redes sociales habituales? 💵')
+        Cabeceras4.botonOne()
+        Cabeceras4.elements.textoDentroUno().should('have.text', 'Sí, tenés que seguir usando tus redes sociales habituales. Adme te permite linkear tus cuentas de Facebook, Twitter e Instagram (y otras en el futuro) para que puedas postear desde una unica app. Ademas de la oportunidad de recibir dinero por esponsorizarlas con campañas publicitarias.')
+        Cabeceras4.elements.img().should("be.visible").and(([img]) => {
+            expect(img.naturalWidth).to.equal(119);
+            expect(img.naturalHeight).to.equal(25);
+        })
+    
+    })
+
     
 })
